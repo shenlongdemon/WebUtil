@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="webutilModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Area">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Guid" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="districtId" Type="Guid" Nullable="false" />
+    <Property Name="isActive" Type="Boolean" />
+    <NavigationProperty Name="District" Relationship="Self.FK_area_district" FromRole="Area" ToRole="District" />
+    <NavigationProperty Name="Children" Relationship="Self.FK_children_area" FromRole="Area" ToRole="Children" />
+  </EntityType>
+  <EntityType Name="Child">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Guid" Nullable="false" />
+    <Property Name="fullName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="classId" Type="Guid" Nullable="false" />
+    <Property Name="dateIn" Type="DateTime" Precision="7" />
+    <Property Name="dateOut" Type="DateTime" Precision="7" />
+    <Property Name="sex" Type="Boolean" />
+    <Property Name="birthDate" Type="DateTime" Precision="7" />
+    <Property Name="address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="areaId" Type="Guid" Nullable="false" />
+    <Property Name="fatherName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="fatherPhone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="motherName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="motherPhone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="isActive" Type="Boolean" />
+    <NavigationProperty Name="Area" Relationship="Self.FK_children_area" FromRole="Children" ToRole="Area" />
+    <NavigationProperty Name="Class" Relationship="Self.FK_children_class" FromRole="Children" ToRole="Class" />
+  </EntityType>
+  <EntityType Name="Class">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Guid" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="isActive" Type="Boolean" />
+    <NavigationProperty Name="Children" Relationship="Self.FK_children_class" FromRole="Class" ToRole="Children" />
+  </EntityType>
+  <EntityType Name="District">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Guid" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="isActive" Type="Boolean" />
+    <NavigationProperty Name="Areas" Relationship="Self.FK_area_district" FromRole="District" ToRole="Area" />
+  </EntityType>
+  <Association Name="FK_area_district">
+    <End Role="District" Type="Self.District" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Area" Type="Self.Area" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="District">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Area">
+        <PropertyRef Name="districtId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_children_area">
+    <End Role="Area" Type="Self.Area" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Children" Type="Self.Child" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Area">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Children">
+        <PropertyRef Name="areaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_children_class">
+    <End Role="Class" Type="Self.Class" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Children" Type="Self.Child" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Class">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Children">
+        <PropertyRef Name="classId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="SchoolDbContext" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Areas" EntityType="Self.Area" />
+    <EntitySet Name="Children" EntityType="Self.Child" />
+    <EntitySet Name="Classes" EntityType="Self.Class" />
+    <EntitySet Name="Districts" EntityType="Self.District" />
+    <AssociationSet Name="FK_area_district" Association="Self.FK_area_district">
+      <End Role="District" EntitySet="Districts" />
+      <End Role="Area" EntitySet="Areas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_children_area" Association="Self.FK_children_area">
+      <End Role="Area" EntitySet="Areas" />
+      <End Role="Children" EntitySet="Children" />
+    </AssociationSet>
+    <AssociationSet Name="FK_children_class" Association="Self.FK_children_class">
+      <End Role="Class" EntitySet="Classes" />
+      <End Role="Children" EntitySet="Children" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

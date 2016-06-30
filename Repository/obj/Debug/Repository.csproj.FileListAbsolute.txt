@@ -1,0 +1,9 @@
+E:\HOC_TAP\Project\Visual_Studio_2010\Projects\WORK\WebService\WebUtil\Repository\bin\Debug\Repository.dll.config
+E:\HOC_TAP\Project\Visual_Studio_2010\Projects\WORK\WebService\WebUtil\Repository\bin\Debug\Repository.dll
+E:\HOC_TAP\Project\Visual_Studio_2010\Projects\WORK\WebService\WebUtil\Repository\bin\Debug\Repository.pdb
+E:\HOC_TAP\Project\Visual_Studio_2010\Projects\WORK\WebService\WebUtil\Repository\bin\Debug\EntityFramework.dll
+E:\HOC_TAP\Project\Visual_Studio_2010\Projects\WORK\WebService\WebUtil\Repository\bin\Debug\EntityFramework.SqlServer.dll
+E:\HOC_TAP\Project\Visual_Studio_2010\Projects\WORK\WebService\WebUtil\Repository\bin\Debug\EntityFramework.xml
+E:\HOC_TAP\Project\Visual_Studio_2010\Projects\WORK\WebService\WebUtil\Repository\bin\Debug\EntityFramework.SqlServer.xml
+E:\HOC_TAP\Project\Visual_Studio_2010\Projects\WORK\WebService\WebUtil\Repository\obj\Debug\Repository.dll
+E:\HOC_TAP\Project\Visual_Studio_2010\Projects\WORK\WebService\WebUtil\Repository\obj\Debug\Repository.pdb

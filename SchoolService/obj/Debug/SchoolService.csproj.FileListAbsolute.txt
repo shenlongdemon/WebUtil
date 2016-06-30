@@ -1,0 +1,14 @@
+E:\HOC_TAP\Project\Visual_Studio_2010\Projects\WORK\WebService\WebUtil\SchoolService\obj\Debug\SchoolService.csprojResolveAssemblyReference.cache
+E:\HOC_TAP\Project\Visual_Studio_2010\Projects\WORK\WebService\WebUtil\SchoolService\bin\Debug\SchoolService.dll
+E:\HOC_TAP\Project\Visual_Studio_2010\Projects\WORK\WebService\WebUtil\SchoolService\bin\Debug\SchoolService.pdb
+E:\HOC_TAP\Project\Visual_Studio_2010\Projects\WORK\WebService\WebUtil\SchoolService\bin\Debug\Repository.dll
+E:\HOC_TAP\Project\Visual_Studio_2010\Projects\WORK\WebService\WebUtil\SchoolService\bin\Debug\SchoolRepository.dll
+E:\HOC_TAP\Project\Visual_Studio_2010\Projects\WORK\WebService\WebUtil\SchoolService\bin\Debug\EntityFramework.dll
+E:\HOC_TAP\Project\Visual_Studio_2010\Projects\WORK\WebService\WebUtil\SchoolService\bin\Debug\Repository.pdb
+E:\HOC_TAP\Project\Visual_Studio_2010\Projects\WORK\WebService\WebUtil\SchoolService\bin\Debug\SchoolRepository.pdb
+E:\HOC_TAP\Project\Visual_Studio_2010\Projects\WORK\WebService\WebUtil\SchoolService\bin\Debug\EntityFramework.xml
+E:\HOC_TAP\Project\Visual_Studio_2010\Projects\WORK\WebService\WebUtil\SchoolService\obj\Debug\SchoolService.dll
+E:\HOC_TAP\Project\Visual_Studio_2010\Projects\WORK\WebService\WebUtil\SchoolService\obj\Debug\SchoolService.pdb
+E:\HOC_TAP\Project\Visual_Studio_2010\Projects\WORK\WebService\WebUtil\SchoolService\bin\Debug\SchoolService.dll.config
+E:\HOC_TAP\Project\Visual_Studio_2010\Projects\WORK\WebService\WebUtil\SchoolService\bin\Debug\EntityFramework.SqlServer.dll
+E:\HOC_TAP\Project\Visual_Studio_2010\Projects\WORK\WebService\WebUtil\SchoolService\bin\Debug\EntityFramework.SqlServer.xml
