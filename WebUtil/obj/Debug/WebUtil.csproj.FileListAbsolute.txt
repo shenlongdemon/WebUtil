@@ -54,3 +54,9 @@ E:\HOC_TAP\Project\Visual_Studio_2010\Projects\WORK\WebService\WebUtil\WebUtil\b
 E:\HOC_TAP\Project\Visual_Studio_2010\Projects\WORK\WebService\WebUtil\WebUtil\bin\EntityFramework.xml
 E:\HOC_TAP\Project\Visual_Studio_2010\Projects\WORK\WebService\WebUtil\WebUtil\bin\EntityFramework.SqlServer.dll
 E:\HOC_TAP\Project\Visual_Studio_2010\Projects\WORK\WebService\WebUtil\WebUtil\bin\EntityFramework.SqlServer.xml
+E:\HOC_TAP\Project\Visual_Studio_2010\Projects\WORK\WebService\WebUtil\WebUtil\bin\Utilities.dll
+E:\HOC_TAP\Project\Visual_Studio_2010\Projects\WORK\WebService\WebUtil\WebUtil\bin\System.Web.Cors.dll
+E:\HOC_TAP\Project\Visual_Studio_2010\Projects\WORK\WebService\WebUtil\WebUtil\bin\System.Web.Http.Cors.dll
+E:\HOC_TAP\Project\Visual_Studio_2010\Projects\WORK\WebService\WebUtil\WebUtil\bin\System.Web.Http.Cors.xml
+E:\HOC_TAP\Project\Visual_Studio_2010\Projects\WORK\WebService\WebUtil\WebUtil\bin\Commons.dll
+E:\HOC_TAP\Project\Visual_Studio_2010\Projects\WORK\WebService\WebUtil\WebUtil\bin\Commons.pdb

@@ -1,0 +1,74 @@
+@media only screen and (min-width: 768px) {
+    /* tablets and desktop */
+    
+}
+/* phones */
+@media only screen and (max-width: 767px) {    
+    /*    For LOGIN*/
+    #login-container {
+        margin:0px auto;
+        width:100%;
+        border: none;
+        box-shadow: none;
+        min-height: 300px;
+    }
+    #login {
+        border: none;
+        box-shadow: none;
+        min-height: 300px;
+    }
+    .login-frm .fi input[type="text"], .login-frm .fi input[type="password"] {        
+        width: 100%;        
+    }
+    header {
+        color: #fff;
+        height: 50px;
+        line-height: 50px;
+        background: #000 url(../images/site-logo.svg) no-repeat center center;
+        background-size: 70px 35px; 
+    }
+    header .logo img {
+        max-height: 35px;
+    }
+    .touch-menu {
+        cursor: pointer;
+    }
+    .pushy .level2 {
+        padding-left: 35px;
+    }
+    .version {
+        padding: 5px 20px;
+        font-size: 10px;
+        color: #ccc;
+        position: fixed;
+        bottom: 0;
+        line-height: normal;
+        display: block;
+        width: 100%;
+        border-top: 1px solid rgba(0, 0, 0, 0.1); 
+    }
+    .toolbar,.breadcrumb {
+        display: none;
+    }
+}
+/* portrait phones */
+@media only screen and (max-width: 767px) and (orientation: landscape) {
+    .login-frm .fi .ic {
+        width: 7%;
+    }
+    .login-frm .fi .input {
+        width: 93%;
+    }
+}
+/* portrait phones */
+@media only screen and (max-width: 767px) and (orientation: portrait) {    
+    
+}
+
+
+/* iPhone 4 ----------- */
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+/* Styles */
+}

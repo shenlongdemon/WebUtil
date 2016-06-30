@@ -18,6 +18,7 @@ namespace SchoolRepository.EFRepository
         public SchoolDbContext()
             : base("name=SchoolDbContext")
         {
+            Configuration.ProxyCreationEnabled = false;
         }
     
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

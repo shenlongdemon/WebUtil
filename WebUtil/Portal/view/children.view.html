@@ -1,0 +1,42 @@
+﻿<header ng-include="'view/_header.html'"></header>
+<section id="content">
+    <div class="container">
+        <div class="row">
+            <table class="table table-bordered table-striped table-condensed" st-table="vm.displayUsers" st-pipe="vm.callServer">
+                <thead class="">
+                    <tr>
+                        <th st-sort="fullName">Họ tên</th>                        
+                        <th st-sort="fullName">Lớp</th>      
+                        <th st-sort="fullName">Họ tên</th>      
+                        <th st-sort="fullName">Họ tên</th>      
+                        <th st-sort="fullName">Họ tên</th>      
+                        <th st-sort="fullName">Họ tên</th>      
+                        <th st-sort="fullName">Họ tên</th>      
+                        <th st-sort="fullName">Họ tên</th>      
+                        <th st-sort="fullName">Họ tên</th>      
+                        <th st-sort="fullName">Họ tên</th>      
+                        <th st-sort="fullName">Họ tên</th>      
+                    </tr>
+                </thead>
+                <tr>
+                    <td align="center" ng-show="vm.isLoading" colspan="13">
+                        Loading user data...
+                        <img src="themes/images/loading.gif" />
+                    </td>
+                </tr>
+                <tbody ng-hide="vm.isLoading">
+                    <tr ng-repeat="child in vm.children">
+                        <td>{{child.fullName}}</td>                        
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="10" class="text-center">
+                            <div st-pagination="" st-items-by-page="10"></div>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+</section>

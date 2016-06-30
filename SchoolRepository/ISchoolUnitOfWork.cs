@@ -11,6 +11,9 @@ namespace SchoolRepository
     {
         IDistrictRepository DistrictRepository { get; }
         IClassRepository ClassRepository { get; }
+        IChildrenRepository ChildrenRepository { get; }
+
+        
     }
 
 }

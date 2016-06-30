@@ -1,0 +1,87 @@
+/*
+* Copyright (c) 2012, LogiGear Corporation. All rights reserved.
+* Version: 1.0.0
+*/
+
+/*RESET
+------------------------------------------------------------------ */
+html {margin:0;padding:0;border:0;}
+body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, dialog, figure, footer, header, hgroup, nav, section { margin:0; padding:0; border:0; font-size:100%; font:inherit }
+article, aside, details, figcaption, figure, dialog, footer, header, hgroup, menu, nav, section {display:block;}
+body { line-height:1.5;background:white; }
+table {border-collapse:separate;border-spacing:0;}
+blockquote:before, blockquote:after, q:before, q:after {content:'';}
+blockquote, q {quotes:"" "";}
+a img {border:none;}
+:focus {outline:0;}
+
+/* TYPOGRAPHY
+------------------------------------------------------------------ */
+html {font-size:100.1%;}
+body {font-size:75%;color:#222;background:#fff;font-family:Arial, Helvetica, sans-serif, "Helvetica Neue";}
+h1, h2, h3, h4, h5, h6 {font-weight:normal;color:#111;}
+h1 {font-size:1.5em;margin-bottom:0.5em;}
+h2 {font-size: 1.3em; margin-bottom: 0.75em; }
+h3 {font-size:1.2em;margin-bottom:1em;}
+h4 {font-size:1.1em;margin-bottom:0.3em;}
+h5 {font-size:1em;font-weight:bold;margin-bottom:1.5em;}
+h6 {font-size:1em;font-weight:bold;}
+h1 img, h2 img, h3 img, h4 img, h5 img, h6 img {margin:0;}
+p {margin:0 0 0.8em;}
+a {color:#DD4B39; text-decoration:none;}
+a:focus, a:hover {color:#0066CC; text-decoration:underline;}
+blockquote {margin:1.5em;color:#666;font-style:italic;}
+strong, dfn {font-weight:bold;}
+em, dfn {font-style:italic;}
+sup, sub {line-height:0;}
+abbr, acronym {border-bottom:1px dotted #666;}
+address {margin:0 0 1.5em;font-style:italic;}
+del {color:#666;}
+pre {margin:1.5em 0;white-space:pre;}
+pre, code, tt { font:1em 'andale mono', 'lucida console', monospace;line-height:1.5; }
+li ul, li ol {margin:0;}
+ul, ol {margin:0em; padding-left:0em;}
+ul {list-style-type:none;}
+ol {list-style-type:decimal;}
+dl {margin:0 0 1.5em 0;}
+dl dt {font-weight:bold;}
+dd {margin-left:1.5em;}
+th {font-weight:bold;}
+thead th {background:#e3e3e3;}
+tfoot {font-style:italic;}
+caption {background:#eee;}
+fieldset { border:1px solid #dddddd; padding:10px; margin-bottom:10px;}
+legend{ font-weight: bold; color:#0066cc; padding:0px 2px; }
+
+/* CONTROL
+------------------------------------------------------------------ */
+
+input[type=text], input[type=password], textarea, select
+{	
+    background: #fff url(../images/frame/bg-form-input-text.gif) repeat-x scroll left bottom;
+    border: 1px solid #c0c0c0; padding: 5px;
+    border-radius: 4px; -moz-border-radius:4px; -webkit-border-radius:4px;
+}
+textarea { padding-left:2px; resize: none; }
+select { padding: 4px 5px; }
+input[type=text]:focus, input[type=password]:focus, select:focus, textarea:focus { background:#fff; }
+input[type=button], input[type=submit], input[type=reset], .button {	
+    background-color: #ECECEC;
+    background-image: -moz-linear-gradient(#F4F4F4, #ECECEC);
+    border:1px solid #d4d4d4; border-radius: 0.2em; color: #333333; cursor: pointer; font: 11px sans-serif; font-weight: bold; margin: 0; outline: medium none;
+    overflow: visible; padding: 0.7em 1em; position: relative; text-decoration: none; text-shadow: 1px 1px 0 white;
+}
+input:hover[type=button], input:hover[type=submit], input:hover[type=reset], .button:hover {	
+    background-color: #3C8DDE;
+    background-image: -moz-linear-gradient(#599BDC, #3072B3);
+    border-color: #3072B3 #3072B3 #2A65A0;
+    color: #FFFFFF;
+    text-decoration: none;
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.3);
+}
+input:active[type=button], input:active[type=submit], input:active[type=reset], .button:active {	
+    background-color: #3072B3;
+    background-image: -moz-linear-gradient(#3072B3, #599BDC);
+    border-color: #2A65A0 #2A65A0 #3884CF;
+}
+/*view comment article*/

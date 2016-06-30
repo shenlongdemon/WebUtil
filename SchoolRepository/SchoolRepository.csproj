@@ -63,6 +63,7 @@
     <Compile Include="EFRepository\District.cs">
       <DependentUpon>SchoolDb.tt</DependentUpon>
     </Compile>
+    <Compile Include="EFRepository\EFChildrenRepository.cs" />
     <Compile Include="EFRepository\EFClassRepository.cs" />
     <Compile Include="EFRepository\EFDistrictRepository.cs" />
     <Compile Include="EFRepository\EFSchoolUnitOfWork.cs" />
@@ -81,6 +82,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SchoolDb.edmx</DependentUpon>
     </Compile>
+    <Compile Include="IChildrenRepository.cs" />
     <Compile Include="IClassRepository.cs" />
     <Compile Include="IDistrictRepository.cs" />
     <Compile Include="ISchoolUnitOfWork.cs" />

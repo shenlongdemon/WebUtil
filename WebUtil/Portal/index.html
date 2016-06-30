@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html ng-app="app">
+    <head>
+        <title>School</title>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link href="themes/images/favicon.png" rel="shortcut icon" type="image/png"/>
+        <!--    <link type="text/css" rel="stylesheet" href="themes/css/app.css"/>-->
+        <link type="text/css" rel="stylesheet" href="themes/css/font-awesome.min.css"/>
+        <link type="text/css" rel="stylesheet" href="themes/css/bootstrap.min.css"/>
+        <link type="text/css" rel="stylesheet" href="themes/css/reset.css"/>
+        <link type="text/css" rel="stylesheet" href="themes/css/main.css"/>
+        <link type="text/css" rel="stylesheet" href="themes/css/select2.min.css"/>
+        <link type="text/css" rel="stylesheet" href="themes/css/login.css"/>
+        <link type="text/css" rel="stylesheet" href="themes/css/assessment.css"/>
+        <link type="text/css" rel="stylesheet" href="themes/css/responsive.css"/>
+        <link type="text/css" rel="stylesheet" href="themes/css/angular-loading.css"/>
+        <link type="text/css" rel="stylesheet" href="themes/js/loading-bar/loading-bar.css"/>
+        <link type="text/css" rel="stylesheet" href="themes/js/jquery-ui/jquery-ui.min.css"/>
+
+        <link type="text/css" rel="stylesheet" href="themes/js/jqGrid/css/ui.jqgrid-bootstarp.css"/>
+        <link type="text/css" rel="stylesheet" href="themes/js/jqGrid/css/ui.jqgrid.css"/>
+        <link type="text/css" rel="stylesheet" href="themes/js/videojs/video-js.css"/>
+
+        <!--    <link rel="stylesheet" href="//releases.flowplayer.org/6.0.5/skin/minimalist.css">-->
+        <link rel="stylesheet" href="https://releases.flowplayer.org/6.0.5/skin/functional.css">
+
+        <script src="themes/js/videojs/video.js"></script>
+
+
+        <link type="text/css" rel="stylesheet" href="themes/js/mediaelement/mediaelementplayer.css"/>
+
+        <style type="text/css">
+            #loading-bar .bar {
+                background: #94d500;
+            }
+
+            #loading-bar .peg {
+                -moz-box-shadow: #94d500 1px 0 6px 1px;
+                -ms-box-shadow: #94d500 1px 0 6px 1px;
+                -webkit-box-shadow: #94d500 1px 0 6px 1px;
+                box-shadow: #94d500 1px 0 6px 1px;
+            }
+
+            #loading-bar-spinner .spinner-icon {
+                border-top-color:  #94d500;
+                border-left-color: #94d500;
+            }
+
+            .container {
+                padding-right: 0px;
+                padding-left: 0px;
+            }
+
+        </style>
+
+
+    </head>
+    <body>
+        <div id="wrapper">
+            <div ng-view class="view-animate"></div>
+        </div>
+        <footer id="footer" class="hidden-xs">
+            <div ng-cloak>
+                Portal Version {{version}}
+            </div>
+        </footer>
+
+        <script src="themes/js/jquery-2.1.4.min.js"></script>
+        <script src="themes/js/select2.min.js"></script>
+        <script src="themes/js/bootstrap.min.js"></script>
+        <script src="themes/js/angular-1.2.20/angular.js"></script>
+        <script src="themes/js/angular-1.2.20/angular-route.js"></script>
+        <script src="themes/js/angular-ui-router.js"></script>
+        <script src="themes/js/angular-1.2.13/angular-cookies.js"></script>
+        <script src="themes/js/angular-1.2.13/angular-animate.js"></script>
+        <script src="themes/js/jquery-ui/jquery-ui.min.js"></script>
+        <script src="themes/js/loading-bar/loading-bar.js"></script>
+        <script src="themes/js/jqGrid/js/i18n/grid.locale-en.js"></script>
+        <script src="themes/js/jqGrid/js/jquery.jqGrid.min.js"></script>
+        <script src="themes/js/mediaelement/mediaelement-and-player.min.js"></script>
+        <script src="themes/js/smart-table.js"></script>
+        <script src="themes/js/ngStorage.min.js"></script>
+        <script src="themes/js/FileSaver.js"></script>
+        <script src="themes/js/re.js"></script>
+        <script src="themes/js/papaparse.min.js"></script>
+        <script src="themes/js/angular-dateparser.min.js"></script>
+        <script src="themes/js/ui-bootstrap-tpls-0.12.0.min.js"></script>
+        <script src="themes/js/angular-loading.js"></script>
+        <script src="themes/js/spin.min.js"></script>
+
+        <!-- date time with momentjs-->
+        <script src="themes/js/moment.min.js"></script>
+        <script src="themes/js/moment-timezone-with-data.min.js"></script>
+        <script src="themes/js/angular-moment.min.js"></script>
+        <script src="themes/js/moment-with-locales.min.js"></script>
+
+        <script src="themes/js/hotkeys.js"></script>
+
+        <script src='themes/js/ng-csv.min.js'></script>
+        <script src="themes/js/angular-sanitize.min.js"></script>
+        <script src="https://releases.flowplayer.org/6.0.5/flowplayer.min.js"></script>
+        <script src="themes/js/re.js"></script>
+		<script src="themes/js/Blob.js"></script>
+        <script src="app.js"></script>
+
+        <script>
+                    videojs.options.flash.swf = "themes/js/videojs/video-js.swf";
+        </script>
+
+        <script src="services/authentication.service.js"></script>
+        <script src="services/flash.service.js"></script>
+        <script src="services/user.service.js"></script>
+        <script src="services/helper.service.js"></script>
+        <script src="services/children.service.js"></script>
+    
+        
+        <script src="controller/home.controller.js"></script>
+        <script src="controller/children.controller.js"></script>
+    </body>
+</html>

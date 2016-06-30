@@ -15,6 +15,18 @@ namespace SchoolRepository.EFRepository
         {
             _districtRepository = new EFDistrictRepository(_dbContext);
             _classRepository = new EFClassRepository(_dbContext);
+            _childrenRepository = new EFChildrenRepository(_dbContext);
+        }
+
+
+
+        private readonly IChildrenRepository _childrenRepository;
+        public IChildrenRepository ChildrenRepository
+        {
+            get
+            {
+                return _childrenRepository;
+            }
         }
 
         private readonly IDistrictRepository _districtRepository;
