@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolService", "SchoolServ
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Commons", "Commons\Commons.csproj", "{157E2959-157C-4B2C-BBB9-2E308B588B6F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{9E0AAC5D-D7E9-4DD5-AD76-B218245DBA03}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{157E2959-157C-4B2C-BBB9-2E308B588B6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{157E2959-157C-4B2C-BBB9-2E308B588B6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{157E2959-157C-4B2C-BBB9-2E308B588B6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E0AAC5D-D7E9-4DD5-AD76-B218245DBA03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E0AAC5D-D7E9-4DD5-AD76-B218245DBA03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E0AAC5D-D7E9-4DD5-AD76-B218245DBA03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E0AAC5D-D7E9-4DD5-AD76-B218245DBA03}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

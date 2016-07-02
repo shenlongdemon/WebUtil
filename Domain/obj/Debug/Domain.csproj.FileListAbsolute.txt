@@ -1,0 +1,5 @@
+E:\HOC_TAP\Project\Visual_Studio_2010\Projects\WORK\WebService\WebUtil\Domain\bin\Debug\Domain.dll
+E:\HOC_TAP\Project\Visual_Studio_2010\Projects\WORK\WebService\WebUtil\Domain\bin\Debug\Domain.pdb
+E:\HOC_TAP\Project\Visual_Studio_2010\Projects\WORK\WebService\WebUtil\Domain\obj\Debug\Domain.csprojResolveAssemblyReference.cache
+E:\HOC_TAP\Project\Visual_Studio_2010\Projects\WORK\WebService\WebUtil\Domain\obj\Debug\Domain.dll
+E:\HOC_TAP\Project\Visual_Studio_2010\Projects\WORK\WebService\WebUtil\Domain\obj\Debug\Domain.pdb

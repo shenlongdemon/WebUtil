@@ -5,17 +5,20 @@
             <table class="table table-bordered table-striped table-condensed" st-table="vm.displayUsers" st-pipe="vm.callServer">
                 <thead class="">
                     <tr>
+                        <th nowrap><button style="background-color:yellow" ng-disabled="(vm.children | filter:{isSelect:true}).length == 0">Chuyen lop</button></th>  
                         <th st-sort="fullName">Họ tên</th>                        
-                        <th st-sort="fullName">Lớp</th>      
-                        <th st-sort="fullName">Họ tên</th>      
-                        <th st-sort="fullName">Họ tên</th>      
-                        <th st-sort="fullName">Họ tên</th>      
-                        <th st-sort="fullName">Họ tên</th>      
-                        <th st-sort="fullName">Họ tên</th>      
-                        <th st-sort="fullName">Họ tên</th>      
-                        <th st-sort="fullName">Họ tên</th>      
-                        <th st-sort="fullName">Họ tên</th>      
-                        <th st-sort="fullName">Họ tên</th>      
+                        <th st-sort="class">Lớp</th>      
+                        <th st-sort="dateIn">Ngay vao</th>      
+                        <th st-sort="dateOut">Ngay ra</th>      
+                        <th>Gioi tinh</th>      
+                        <th>Ngay sinh</th>      
+                        <th>Dia chi</th>      
+                        <th st-sort="area">Phuong</th>      
+                        <th>Ten cha</th>      
+                        <th>Sdt cha</th>      
+                        <th>Ten me</th>      
+                        <th>Sdt me</th>                                   
+                        <th><button style="background-color:chartreuse" ng-click="vm.openPopupUpdateChildren({}, 'Them tre', 1)">Them tre</button></th> 
                     </tr>
                 </thead>
                 <tr>
@@ -26,12 +29,56 @@
                 </tr>
                 <tbody ng-hide="vm.isLoading">
                     <tr ng-repeat="child in vm.children">
-                        <td>{{child.fullName}}</td>                        
+                        <td>
+                            <input type="checkbox" ng-model="child.isSelect" />
+                        </td>
+                        <td>
+                            {{child.fullName}}
+                        </td>                        
+                        <td>
+                            {{child.Class.name}}                            
+                        </td>            
+                        <td>
+                            {{child.dateIn}}
+                        </td>            
+                        <td>
+                            {{child.dateOut}}
+                        </td> 
+                        
+                        <td>
+                            {{child.sex == true ? vm.sexes[0].name : vm.sexes[1].name}}
+                        </td>
+                        <td>
+                            {{child.birthDate}}
+                        </td>
+                        <td>
+                            {{child.address}}
+                        </td>
+                        <td>
+                            {{child.Area.name}}
+                        </td>
+
+                        <td>
+                            {{child.fatherName}}
+                        </td>
+                        <td>
+                            {{child.fatherPhone}}
+                        </td>
+                        <td>
+                            {{child.motherName}}
+                        </td>
+                        <td>
+                            {{child.motherPhone}}
+                        </td>
+                        <td nowrap>
+                            <button style="background-color:aquamarine" ng-click="vm.openPopupUpdateChildren(child, 'Chinh sua', 2)">Sua</button>
+                            <button style="background-color:red" ng-click="vm.deleteChildren(child.id)">Xoa</button>
+                        </td>
                     </tr>
                 </tbody>
                 <tfoot>
                     <tr>
-                        <td colspan="10" class="text-center">
+                        <td colspan="14" class="text-center">
                             <div st-pagination="" st-items-by-page="10"></div>
                         </td>
                     </tr>
@@ -39,4 +86,136 @@
             </table>
         </div>
     </div>
+
+
+
+
+
+
+
+
+
+    <div id="dialog-confirm" title="Xoa tre" style="display:none">
+        <p><span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span>Bạn có muốn xóa trẻ này không ?</p>
+    </div>
+
+    <script type="text/ng-template" id="myModalContent.html">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" style="font-weight: bold;">{{title}}</h3>
+            </div>
+            <div class="modal-body">
+                <form name="form" role="form">
+                    <div class="col-md-12">
+                        <label class="col-md-3">Ho ten</label>
+                         <input type="text" ng-model="currentChildren.fullName"/>
+                    </div>
+                    <div class="col-md-12">
+                        <label class="col-md-3">Lop</label>
+                         <select class="selectpicker" required ng-options="class as class.name for class in classes track by class.id"
+                                ng-model="currentChildren.Class"></select>
+                    </div>
+
+
+                   
+                   
+                    <div class="col-md-12">
+                        <label class="col-md-3">Gioi tinh</label>
+                         <select class="selectpicker" required ng-options="sex.value as sex.name for sex in sexes"
+        ng-model="currentChildren.sex"></select>
+                    </div>
+
+                    <div class="col-md-12">
+                        <label class="col-md-3"> Dia chi</label>
+                        <input class="col-md-9" type="text" ng-model="currentChildren.address" />
+                    </div>
+                    <div class="col-md-12">
+                        <label class="col-md-3">Phuong</label>
+                         <select class="selectpicker" required ng-options="area as area.name group by area.districtName for area in areas track by area.id"
+                                       ng-model="currentChildren.Area"></select>
+                    </div>
+
+                    <div class="col-md-12">
+                        <label class="col-md-3">Ten cha</label>
+                         <input type="text" ng-model="currentChildren.fatherName" />
+                    </div>
+                    <div class="col-md-12">
+                        <label class="col-md-3">Sdt cha</label>
+                         <input type="text" ng-model="currentChildren.fatherPhone" />
+                    </div>
+                    <div class="col-md-12">
+                        <label class="col-md-3">Ten me</label>
+                         <input type="text" ng-model="currentChildren.motherName" />
+                    </div>
+                    <div class="col-md-12">
+                        <label class="col-md-3">Sdt me </label>
+                        <input type="text" ng-model="currentChildren.motherPhone" />
+                    </div>
+                </form>
+            </div>
+            <div align="center" ng-show="dataLoading">
+                <img src="themes/images/loading.gif" />Loading data...
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" class="btn btn-primary" ng-click="updateChildren()">Luu</button>
+                <button class="btn btn-warning" ng-click="cancel()">Thoat</button>
+            </div>
+        </div>
+    </script>     
+
+
+
+
+
+
+    <script>
+        
+  $(function() {
+      $("[id*='date']").datepicker({
+        dateFormat: 'yy-mm-dd'
+    });
+  });
+    </script>
 </section>
+
+<!--<td>
+    <input ng-model="child.fullName" />
+</td>
+<td>
+    <select required ng-options="class.id as class.name for class in vm.classes"
+            ng-model="child.classId"></select>
+</td>
+<td>
+    <input class="animate-switch" id="dateIn{{child.id}}" type="text" placeholder="Select Date" ng-model="child.dateIn" required autocomplete="off" />
+</td>
+<td>
+    <input class="animate-switch" id="dateOut{{child.id}}" type="text" placeholder="Select Date" ng-model="child.dateOut" required autocomplete="off" />
+</td>
+
+<td>
+    <select required ng-options="sex.value as sex.name for sex in vm.sexes"
+            ng-model="child.sex"></select>
+</td>
+<td>
+    <input class="animate-switch" id="dateBirth{{child.id}}" type="text" placeholder="Select Date" ng-model="child.birthDate" required autocomplete="off" />
+</td>
+<td>
+    <input ng-model="child.address" />
+</td>
+<td>
+    <select required ng-options="area.id as area.name group by area.districtName for area in vm.areas"
+            ng-model="child.areaId"></select>
+</td>
+
+<td>
+    <input ng-model="child.fatherName" />
+</td>
+<td>
+    <input ng-model="child.fatherPhone" />
+</td>
+<td>
+    <input ng-model="child.motherName" />
+</td>
+<td>
+    <input ng-model="child.motherPhone" />
+</td>-->

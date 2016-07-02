@@ -193,6 +193,7 @@
     <Content Include="Portal\controller\home.controller.js" />
     <Content Include="Portal\index.html" />
     <Content Include="Portal\services\authentication.service.js" />
+    <Content Include="Portal\services\common.service.js" />
     <Content Include="Portal\services\children.service.js" />
     <Content Include="Portal\services\flash.service.js" />
     <Content Include="Portal\services\helper.service.js" />
@@ -505,6 +506,10 @@
     <ProjectReference Include="..\Commons\Commons.csproj">
       <Project>{157E2959-157C-4B2C-BBB9-2E308B588B6F}</Project>
       <Name>Commons</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Domain\Domain.csproj">
+      <Project>{9e0aac5d-d7e9-4dd5-ad76-b218245dba03}</Project>
+      <Name>Domain</Name>
     </ProjectReference>
     <ProjectReference Include="..\SchoolService\SchoolService.csproj">
       <Project>{8f94a66d-4403-439c-bcaa-1a5dcecdc557}</Project>

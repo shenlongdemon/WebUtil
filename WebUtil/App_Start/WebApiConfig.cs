@@ -14,7 +14,9 @@ namespace WebUtil
 
             // Web API routes
             config.MapHttpAttributeRoutes();
+            GlobalConfiguration.Configuration.Formatters.JsonFormatter.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
 
+            
             //config.Routes.MapHttpRoute(
             //    name: "DefaultApi",
             //    routeTemplate: "api/{controller}/{id}",
@@ -30,10 +32,7 @@ namespace WebUtil
                    id = RouteParameter.Optional
               }
            );
-
-            var json = config.Formatters.JsonFormatter;
-            json.SerializerSettings.PreserveReferencesHandling = Newtonsoft.Json.PreserveReferencesHandling.Objects;
-            config.Formatters.Remove(config.Formatters.XmlFormatter);
+           
         }
     }
 }

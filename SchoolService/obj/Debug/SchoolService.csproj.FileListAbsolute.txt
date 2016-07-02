@@ -17,3 +17,5 @@ E:\HOC_TAP\Project\Visual_Studio_2010\Projects\WORK\WebService\WebUtil\SchoolSer
 E:\HOC_TAP\Project\Visual_Studio_2010\Projects\WORK\WebService\WebUtil\SchoolService\bin\Debug\Newtonsoft.Json.xml
 E:\HOC_TAP\Project\Visual_Studio_2010\Projects\WORK\WebService\WebUtil\SchoolService\bin\Debug\Commons.dll
 E:\HOC_TAP\Project\Visual_Studio_2010\Projects\WORK\WebService\WebUtil\SchoolService\bin\Debug\Commons.pdb
+E:\HOC_TAP\Project\Visual_Studio_2010\Projects\WORK\WebService\WebUtil\SchoolService\bin\Debug\Domain.dll
+E:\HOC_TAP\Project\Visual_Studio_2010\Projects\WORK\WebService\WebUtil\SchoolService\bin\Debug\Domain.pdb

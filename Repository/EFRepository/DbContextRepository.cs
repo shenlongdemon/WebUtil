@@ -36,7 +36,7 @@ namespace EFRepository
 
         public virtual IQueryable<T> Where(Expression<Func<T, bool>> predicate)
         {
-            IQueryable<T> query = All().Where(predicate).AsNoTracking<T>().AsQueryable<T>();
+            IQueryable<T> query = All().Where(predicate).AsQueryable<T>();
             return query;
         }
     }
